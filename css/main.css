@@ -1,0 +1,35 @@
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+.container-fluid{
+    display: flex;
+    /* justify-content: center; */
+}
+
+#list{
+    flex:5;
+    background-color: rgb(81, 81, 81);
+    padding-top: 25%;
+    padding-bottom: 5%;
+
+}
+#form{
+    font-weight: 600;
+    position: absolute;
+    right: 0.5%;
+}
+#colorSelect{
+    max-width: 30%;
+}
+
+.clickable-icon{
+    font-size: 32px;
+    cursor: pointer;
+    color: #abacae
+}
+
+.icon-important{
+    color:red;
+}
