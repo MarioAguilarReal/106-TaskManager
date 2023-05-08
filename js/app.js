@@ -1,5 +1,5 @@
 let icon;
-
+//this function return a variable type boolean, define the color of the healt
 function toggleImportant() {
     const iconImportant = 'fa-solid icon-important';
     const iconNoneImportant = 'fa-regular';
@@ -12,35 +12,22 @@ function toggleImportant() {
         return false
     }
 }
-function registerNewTask(){
-    let isImportant = checkIsImportant();
-    // let =$('#').val()
-    // let =$('#').val()
-    // let =$('#').val()
-    // let =$('#').val()
-    // let =$('#').val()
-}
-
-function checkIsImportant(){
-    console.log('hola');
-    let variable = true;
-    variable = $('.#iImportant').hasClass('fa-solid')
-    return variable;
-}
+//This funcion is for show or hide the form, to add new task
 function togleForm() {
     $('.collapse').collapse('toggle');
 }
-
+//Principal function
 function init() {
-    //console.log('Task Manager');
-    icon = $('#iImportant');
+    //funcion of the button for open the form
     $('.btnAddNewTask-collapse').click(togleForm)
-    //load data
-
+    //selecting the toggle button if is important and saving on the variable ICON
+    icon = $('#iImportant');
+    icon.click(toggleImportant);//function of the healt selector (toggle)
+    //load data and
+    $('#addTaskButton').click(createNewTask);
     //assing event
-    icon.click(toggleImportant);
-    $('#addTaskButton').click(registerNewTask);
+    showTasks();
 }
 
-
+//the function init is executed when the page is loaded
 window.onload = init
