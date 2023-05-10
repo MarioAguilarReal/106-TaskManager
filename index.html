@@ -18,8 +18,8 @@
         <nav class=" navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a href="#" class="navbar-brand">
-                    <img src="https://www.softsom.com.mx/wp-content/uploads/2023/03/logo-softsom-white.png" alt=""
-                        width="80" height="60">
+                    <img src="Logos/logo-transparent-svg.svg" alt=""
+                        width="140" height="60">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                     aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,9 +27,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
+                        
                     </ul>
                     <div class="d-flex pb-1 pt-1">
                         <button class="btn btn-secondary flex-fill button-collapse btnAddNewTask-collapse" type="button"
@@ -42,9 +40,10 @@
             </div>
         </nav>
     </header>
+    <h2 class="bodyTitle">Your Tasks</h2>
+    <hr>
     <main class="container-fluid">
-        <section id="list" class="row justify-content-center">
-
+        <section id="list" class="">
         </section>
         <section id="form" class="">
             <div class="d-flex pb-1 pt-1">
@@ -53,6 +52,7 @@
                 </button> -->
             </div>
             <div class="collapse border p-2 rounded bg-dark text-light" id="collapseExample">
+                <div id="alertSection"></div>
                 <form>
                     <div class="mb-1">
                         <i id="iImportant" class="fa-regular fa-heart clickable-icon"></i>
@@ -73,10 +73,10 @@
                         <label for="budget" class="form-label">Status</label>
                         <select class="form-select" aria-label="Default select example" id="status">
                             <option disabled value="" selected>Status</option>
-                            <option value="new">New</option>
-                            <option value="inProgress">In progress</option>
-                            <option value="completed">Completed</option>
-                            <option value="cancelled">Cancelled</option>
+                            <option value="New">New</option>
+                            <option value="In Progress">In-progress</option>
+                            <option value="Completed">Completed</option>
+                            <option value="Cancelled">Cancelled</option>
                         </select>
                     </div>
                     <div class="mb-1">
@@ -87,7 +87,7 @@
                         <label for="dueDate" class="form-label">dueDate</label>
                         <input type="date" class="form-control" id="dueDate">
                     </div>
-                    <button type='button' class="btn btn-secondary mt-2 button-collapse btnAddNewTask-collapse"
+                    <button type='button' class="btn btn-secondary mt-2 "
                         id="addTaskButton">Save Task</button>
                 </form>
             </div>
