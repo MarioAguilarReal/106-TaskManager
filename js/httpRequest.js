@@ -26,16 +26,6 @@ async function saveTask(task) {
     }
     showTasks( await loadTasks());
     console.log(response)
-    // if (task.isImportant == true) {
-    //     oldTasks.unshift(task);
-    //     oldTasks = sortID(oldTasks);
-    // } else {
-    //     oldTasks.push(task);
-    //     oldTasks = sortID(oldTasks);
-    // }
-    // // console.log(oldTasks);
-    // let val = JSON.stringify(oldTasks);
-    // localStorage.setItem(KEY, val);
 }
 
 
