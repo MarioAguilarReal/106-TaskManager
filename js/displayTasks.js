@@ -1,34 +1,39 @@
-function showTasks() {
-    let tasks = seeOldTask();
-    let showCardTasks = '';
+let tasks = []
+function showTasks(tasks) {
+    let showCardTasks = "";
 
     tasks.forEach(task => {
-        // console.log(task);
-        let icon = showIconImp(task.isImportant);
-        // console.log(classIcon)
-        showCardTasks += `
-            <div class = "task" style="border-color:${task.color}">
-
-                ${icon}    
-
-                <div class="info">
-                    <h5>${task.title}</h5>
-                    <p>${task.description}</p>
-                </div>
-
-                <label class="status"> ${task.status}</label>
-
-                <div class="dates">
-                    <label class="budget">$${formatBudget(task.budget)}</label>
+        if(task.name == 'Mario'){
+            
+            let icon = showIconImp(task.isImportant);
+            let id = task._id
+            console.log(id)
+            // console.log(classIcon)
+            showCardTasks += `
+                <div id="${task._id}" class="task" style="border-color:${task.color}">
+    
+                    ${icon}    
+    
+                    <div class="info">
+                        <h5>${task.title}</h5>
+                        <p>${task.description}</p>
+                    </div>
+    
+                    <div class="dates">
+                        <label class="budget">$${formatBudget(task.budget)}</label>
+                        <label class="status"> ${task.status}</label>
+                    </div>
                     <label class="due-date">${task.date}</label>
+    
+                    <i onclick="removeTask('${task._id}')" class="far fa-trash-alt iDelete" ></i>
                 </div>
-                <i class="far fa-trash-alt iDelete" onclick="removeTask(${task.id})"></i>
-            </div>
-        `;
+            `;
+        }
     });
 
     $('#list').html(showCardTasks);
 }
+
 
 function showIconImp(fillOrNot) {
     if (fillOrNot) {
@@ -37,6 +42,7 @@ function showIconImp(fillOrNot) {
         return '<i class="fa-regular fa-heart"></i>';
     }
 }
+
 
 function formatBudget(budget) {
 
